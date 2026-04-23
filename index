@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>TP – Loi d'Ohm — circuits série et parallèle</title>
+<style>
+  body{font-family:Arial,sans-serif;margin:30px;color:#111;max-width:800px;margin:30px auto}
+  h1{color:#1d4ed8;border-bottom:3px solid #1d4ed8;padding-bottom:8px;font-size:22px}
+  h2{color:#374151;font-size:15px;text-transform:uppercase;letter-spacing:.05em;border-left:4px solid #1d4ed8;padding-left:10px;margin-top:24px}
+  .badge{display:inline-block;background:#dbeafe;color:#1d4ed8;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:700;margin:2px}
+  .formule{background:#fef3c7;border:1px solid #f59e0b;border-radius:6px;padding:6px 12px;font-family:monospace;font-size:14px;display:inline-block;margin:4px;color:#92400e}
+  .etape{border:1px solid #e5e7eb;border-radius:8px;padding:14px;margin:10px 0;page-break-inside:avoid}
+  .etape-num{background:#1d4ed8;color:white;border-radius:50%;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;margin-right:10px}
+  .etape-titre{font-weight:700;font-size:14px}
+  .etape-duree{float:right;font-size:12px;color:#6b7280}
+  ol{margin:8px 0 0 0;padding-left:20px}
+  li{font-size:13px;margin-bottom:4px;line-height:1.5}
+  .securite{background:#fee2e2;border:1px solid #ef4444;border-radius:8px;padding:12px;color:#991b1b}
+  .contexte{background:#eff6ff;border:1px solid #3b82f6;border-radius:8px;padding:12px;color:#1e40af;font-style:italic}
+  .materiel-item{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid #f3f4f6;font-size:13px}
+  .tools-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+  .tool-badge{background:#f3f4f6;border-radius:6px;padding:3px 10px;font-size:12px;color:#374151}
+  .header-info{display:flex;gap:20px;margin:10px 0;font-size:13px}
+  .conclusion{background:#f0fdf4;border:1px solid #22c55e;border-radius:8px;padding:12px;color:#15803d;margin-top:20px}
+  @media print{body{margin:10px}h1{font-size:18px}.etape{page-break-inside:avoid}}
+  .footer{text-align:center;margin-top:40px;font-size:11px;color:#9ca3af;border-top:1px solid #e5e7eb;padding-top:12px}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+  <div><div style="font-size:11px;color:#6b7280;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Lycée Gustave Eiffel — Varennes-sur-Seine (77)</div>
+  <div style="font-size:11px;color:#6b7280">Labo Maths-Sciences · ⚡ Électricité</div></div>
+  <div style="font-size:11px;color:#6b7280">Date : _________________&nbsp;&nbsp;Classe : ___________<br>Nom : _____________________________</div>
+</div>
+<h1>TP — Loi d'Ohm — circuits série et parallèle</h1>
+<div class="header-info">
+  <span class="badge">CAP</span><span class="badge">BEP</span><span class="badge">3PM</span>
+  <span style="color:#6b7280">⏱ Durée : 55 minutes</span>
+  <span style="color:#6b7280">Domaine : ⚡ Électricité</span>
+</div>
+<div class="contexte"><strong>Contexte professionnel :</strong> Dans tout atelier électrique ou de maintenance, connaître la loi d'Ohm et savoir mesurer tension et courant est indispensable pour diagnostiquer une panne ou dimensionner un circuit.</div>
+<h2>Objectifs</h2>
+<ul><li>Vérifier la relation U = R·I (loi d'Ohm)</li><li>Réaliser et mesurer des circuits en série et en parallèle</li><li>Utiliser correctement le multimètre en voltmètre (dérivation) et ampèremètre (série)</li></ul>
+<h2>Formules et relations</h2>
+<div><span class="formule">U = R · I</span><span class="formule">R_série = R₁ + R₂ + … + Rₙ</span><span class="formule">1/R_paral = 1/R₁ + 1/R₂ + … + 1/Rₙ</span><span class="formule">P = U · I = R · I² = U²/R</span></div>
+<h2>Outils numériques utilisés</h2><div class="tools-row"><span class="tool-badge">🔢 NumWorks</span><span class="tool-badge">📈 Desmos</span><span class="tool-badge">📊 LibreOffice Calc</span></div>
+<h2>Matériel nécessaire</h2>
+<div class="materiel-item"><span>⚡</span><div><strong>Alimentation réglable TP 6/12/24V AC+DC</strong><span style="color:#6b7280;font-size:12px"> — qté : 9</span></div></div><div class="materiel-item"><span>⚡</span><div><strong>Multimètre numérique</strong><span style="color:#6b7280;font-size:12px"> — qté : 18</span></div></div><div class="materiel-item"><span>⚡</span><div><strong>Rhéostat 10 Ω / 5 A (bornes sécurité)</strong><span style="color:#6b7280;font-size:12px"> — qté : 9</span></div></div>
+<div class="securite"><strong>⚠ Consignes de sécurité</strong><ul><li>TOUJOURS vérifier les branchements avant la mise sous tension</li><li>Ne jamais brancher l'ampèremètre en dérivation (court-circuit → destruction)</li><li>Respecter les calibres du multimètre</li><li>Ne pas dépasser 5 A sur le rhéostat</li></ul></div>
+<h2>Déroulement — Étapes détaillées</h2>
+
+<div class="etape">
+  <div><span class="etape-num">1</span><span class="etape-titre">Préparation et sécurité</span><span class="etape-duree">⏱ 5 min</span></div>
+  <div style="margin:6px 0 0 38px;font-size:12px;color:#6b7280">Matériel : Alimentation réglable TP 6/12/24V AC+DC, Multimètre numérique</div>
+  <ol style="margin-top:8px"><li>Régler l'alimentation sur 6V DC (vérifier que la sortie est éteinte)</li><li>Préparer le multimètre : sélecteur sur V DC, brancher rouge sur V/Ω et noir sur COM</li><li>Vérifier visuellement tous les cordons : pas de fil dénudé ou endommagé</li><li>Prendre note des valeurs nominales des résistances du lot de dipôles</li></ol>
+</div>
+<div class="etape">
+  <div><span class="etape-num">2</span><span class="etape-titre">Circuit simple — vérification U = R·I</span><span class="etape-duree">⏱ 12 min</span></div>
+  <div style="margin:6px 0 0 38px;font-size:12px;color:#6b7280">Matériel : Alimentation réglable TP 6/12/24V AC+DC, Multimètre numérique, E14, E12, E13</div>
+  <ol style="margin-top:8px"><li>Choisir une résistance R₁ (ex: 100 Ω) et la brancher entre les bornes de l'alimentation</li><li>Mettre l'alimentation sous tension (6V DC)</li><li>Mesurer la tension U aux bornes de R₁ avec le voltmètre en DÉRIVATION</li><li>Commuter le multimètre en mode A (courant) et le brancher en SÉRIE dans le circuit</li><li>Mesurer l'intensité I</li><li>Calculer R_mesuré = U/I et comparer à la valeur nominale</li><li>Recommencer avec U = 9V puis 12V et compléter le tableau</li></ol>
+</div>
+<div class="etape">
+  <div><span class="etape-num">3</span><span class="etape-titre">Résistances en série</span><span class="etape-duree">⏱ 10 min</span></div>
+  <div style="margin:6px 0 0 38px;font-size:12px;color:#6b7280">Matériel : Alimentation réglable TP 6/12/24V AC+DC, Multimètre numérique, E14, E12</div>
+  <ol style="margin-top:8px"><li>Associer R₁ et R₂ en série (bout à bout)</li><li>Mesurer U_total et I (identique en tout point d'un circuit série)</li><li>Calculer R_série = U_total / I</li><li>Mesurer U₁ et U₂ séparément aux bornes de chaque résistance</li><li>Vérifier : U_total = U₁ + U₂ et R_série = R₁ + R₂</li><li>Noter les résultats dans le tableau LibreOffice/NumWorks</li></ol>
+</div>
+<div class="etape">
+  <div><span class="etape-num">4</span><span class="etape-titre">Résistances en parallèle</span><span class="etape-duree">⏱ 10 min</span></div>
+  <div style="margin:6px 0 0 38px;font-size:12px;color:#6b7280">Matériel : Alimentation réglable TP 6/12/24V AC+DC, Multimètre numérique, E14, E13</div>
+  <ol style="margin-top:8px"><li>Associer R₁ et R₂ en parallèle (bornes communes)</li><li>Mesurer U (identique aux bornes de chaque branche)</li><li>Mesurer I_total avec l'ampèremètre en série avec l'alimentation</li><li>Mesurer I₁ et I₂ dans chaque branche</li><li>Vérifier : I_total = I₁ + I₂ et 1/R_paral = 1/R₁ + 1/R₂</li><li>Comparer R_paral < min(R₁,R₂) : la résistance totale est plus petite que chaque résistance</li></ol>
+</div>
+<div class="etape">
+  <div><span class="etape-num">5</span><span class="etape-titre">Tracé de la courbe U = f(I) sur NumWorks/Desmos</span><span class="etape-duree">⏱ 10 min</span></div>
+  <div style="margin:6px 0 0 38px;font-size:12px;color:#6b7280">Matériel : Alimentation réglable TP 6/12/24V AC+DC, Rhéostat 10 Ω / 5 A (bornes sécurité), Multimètre numérique</div>
+  <ol style="margin-top:8px"><li>Remplacer les résistances fixes par le rhéostat 10 Ω</li><li>Faire varier la résistance progressivement (0, 2, 4, 6, 8, 10 Ω)</li><li>Pour chaque position, relever U et I</li><li>Saisir les valeurs dans NumWorks (menu STATS) ou LibreOffice Calc</li><li>Tracer U = f(I) → vérifier la linéarité</li><li>Lire la valeur de R = pente de la droite</li></ol>
+</div>
+<div class="etape">
+  <div><span class="etape-num">6</span><span class="etape-titre">Compte-rendu et analyse</span><span class="etape-duree">⏱ 8 min</span></div>
+  
+  <ol style="margin-top:8px"><li>Compléter le tableau de résultats</li><li>Calculer les incertitudes relatives ΔR/R</li><li>Conclure sur la vérification de la loi d'Ohm</li><li>Répondre aux questions : que se passe-t-il si R diminue → I augmente ou diminue ?</li><li>En série vs parallèle : dans quel cas le courant est-il plus fort ?</li></ol>
+</div>
+<div class="conclusion"><strong>✓ Conclusion attendue :</strong><br>La loi d'Ohm U = R·I est vérifiée. En série, les résistances s'additionnent et le courant est le même partout. En parallèle, les tensions sont égales et les courants s'additionnent.</div>
+<h2>Compte-rendu — Espace de travail</h2>
+<div style="border:1px solid #e5e7eb;border-radius:8px;min-height:200px;padding:12px;margin-top:8px">
+  <p style="color:#9ca3af;font-size:12px">Résultats, tableau de mesures, graphiques, calculs et conclusions :</p>
+</div>
+<div class="footer">Lycée Gustave Eiffel — Labo Maths-Sciences — Document généré par l'application labo-ms.fr<br>Fiche TP : tp_ohm · Niveau maths : Proportionnalité, tableaux de valeurs, graphique affine</div>
+</body></html>
